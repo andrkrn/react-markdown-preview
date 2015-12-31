@@ -1,4 +1,45 @@
-.markdown-app {
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid {
   display: flex;
   flex-grow: 1;
+  flex-direction: column;
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+}
+
+.markdown-app {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+}
+
+
+.react-markdown-preview,
+.react-markdown-editor {
+  display: flex;
+  flex-grow: 1;
+  width: 50%;
+}
+
+.react-markdown-editor textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  padding: 1em;
+  font-family: monospace;
+  line-height: 2.5rem;
+}
+
+.react-markdown-preview .markdown-body {
+  padding: 1em;
+  line-height: 2.5rem;
 }

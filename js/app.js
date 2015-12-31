@@ -6,7 +6,9 @@ var MarkdownEditor = React.createClass({
   },
   render: function() {
     return (
-      <textarea ref="markdownEditor" value={this.props.text} onChange={this.handleChange}></textarea>
+      <div className="react-markdown-editor">
+        <textarea ref="markdownEditor" value={this.props.text} onChange={this.handleChange}></textarea>
+      </div>
     );
   }
 });
@@ -21,7 +23,9 @@ var MarkdownPreview = React.createClass({
   },
   render: function() {
     return (
-      <div className="markdown-body" dangerouslySetInnerHTML={this.markdown()} />
+      <div className="react-markdown-preview">
+        <div className="markdown-body" dangerouslySetInnerHTML={this.markdown()} />
+      </div>
     );
   }
 });
