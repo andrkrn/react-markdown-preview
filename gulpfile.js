@@ -3,6 +3,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var webserver = require('gulp-webserver');
 var watch = require('gulp-watch');
 var plumber = require('gulp-plumber');
+var sass = require('gulp-sass');
 
 gulp.task('webserver', function() {
   gulp.src('./')
@@ -13,10 +14,11 @@ gulp.task('webserver', function() {
     }));
 });
 
-gulp.task('css', function () {
-  return gulp.src('src/css/*.css')
-    .pipe(watch('src/css/*.css'))
+gulp.task('sass', function () {
+  return gulp.src('src/css/*.scss')
+    .pipe(watch('src/css/*.scss'))
     .pipe(plumber())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 10 versions'],
       cascade: false
@@ -24,4 +26,4 @@ gulp.task('css', function () {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('default', ['webserver', 'css'])
+gulp.task('default', ['webserver', 'sass'])

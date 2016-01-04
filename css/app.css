@@ -1,7 +1,6 @@
 html, body {
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
 .container-fluid {
   display: -webkit-box;
@@ -17,8 +16,7 @@ html, body {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-}
+  height: 100%; }
 
 #app {
   display: -webkit-box;
@@ -29,8 +27,7 @@ html, body {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  position: relative;
-}
+  position: relative; }
 
 .markdown-app {
   position: relative;
@@ -41,9 +38,7 @@ html, body {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
+  flex-grow: 1; }
 
 .react-markdown-preview,
 .react-markdown-editor {
@@ -55,8 +50,7 @@ html, body {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  width: 50%;
-}
+  width: 50%; }
 
 .react-markdown-editor textarea {
   width: 100%;
@@ -64,10 +58,8 @@ html, body {
   outline: none;
   padding: 1em;
   font-family: monospace;
-  line-height: 2.5rem;
-}
+  line-height: 2.5rem; }
 
 .react-markdown-preview .markdown-body {
   padding: 1em;
-  line-height: 2.5rem;
-}
+  line-height: 2.5rem; }
